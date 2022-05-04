@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="shokofeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Buy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="BuyNumber" Type="Int32" Nullable="false" />
+    <Property Name="CustomerCode" Type="Int32" Nullable="false" />
+    <Property Name="TotalPrice" Type="Int32" Nullable="false" />
+    <Property Name="TotlaDiscount" Type="Int32" Nullable="false" />
+    <Property Name="TotalPardakht" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerCode" Type="Int32" Nullable="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CustomerNumber" Type="Int32" />
+    <Property Name="CustomerMobile" Type="Int32" Nullable="false" />
+    <Property Name="CustomerAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemCode" Type="Int32" Nullable="false" />
+    <Property Name="ItemName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Dicount" Type="Int32" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="SaleNumber" Type="Int32" Nullable="false" />
+    <Property Name="CustomerCode" Type="Int32" Nullable="false" />
+    <Property Name="TotalPrice" Type="Int32" Nullable="false" />
+    <Property Name="TotlaDiscount" Type="Int32" Nullable="false" />
+    <Property Name="TotalPardakht" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="usrpssw">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetailBuy">
+    <Key>
+      <PropertyRef Name="BuyNumber" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Discount" />
+    </Key>
+    <Property Name="BuyNumber" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Discount" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetailSale">
+    <Key>
+      <PropertyRef Name="SaleNumber" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Discount" />
+    </Key>
+    <Property Name="SaleNumber" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Discount" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="shokofeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Buy" EntityType="shokofeModel.Buy" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" />
+    <EntitySet Name="Item" EntityType="Self.Item" />
+    <EntitySet Name="Sale" EntityType="Self.Sale" />
+    <EntitySet Name="usrpssw" EntityType="Self.usrpssw" />
+    <EntitySet Name="DetailBuy" EntityType="Self.DetailBuy" />
+    <EntitySet Name="DetailSale" EntityType="Self.DetailSale" />
+  </EntityContainer>
+</Schema>

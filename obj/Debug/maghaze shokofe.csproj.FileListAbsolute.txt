@@ -1,0 +1,52 @@
+C:\Users\amir_parsa\Desktop\maghaze shokofe\bin\Debug\maghaze shokofe.exe.config
+C:\Users\amir_parsa\Desktop\maghaze shokofe\bin\Debug\maghaze shokofe.exe
+C:\Users\amir_parsa\Desktop\maghaze shokofe\bin\Debug\maghaze shokofe.pdb
+C:\Users\amir_parsa\Desktop\maghaze shokofe\bin\Debug\EntityFramework.dll
+C:\Users\amir_parsa\Desktop\maghaze shokofe\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\amir_parsa\Desktop\maghaze shokofe\bin\Debug\EntityFramework.xml
+C:\Users\amir_parsa\Desktop\maghaze shokofe\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze_shokofe.Addoneitem.resources
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze_shokofe.addordellItem.resources
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze_shokofe.EditOneItem.resources
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze_shokofe.Form1.resources
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze_shokofe.Home.resources
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze_shokofe.Items.resources
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze_shokofe.Itemscounnt.resources
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze_shokofe.Properties.Resources.resources
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze shokofe.csproj.GenerateResource.cache
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze shokofe.csproj.CoreCompileInputs.cache
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze shokofe.csproj.CopyComplete
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze shokofe.exe
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze shokofe.pdb
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze shokofe.csprojAssemblyReference.cache
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze_shokofe.AddoneCostumer.resources
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze_shokofe.Costumer.resources
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze_shokofe.listCustomer.resources
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze_shokofe.EditorDelCustromer.resources
+C:\Users\amir_parsa\Desktop\maghaze shokofe\obj\Debug\maghaze_shokofe.EditoneCustomer.resources
+F:\backup\maghaze shokofe - Copy (2)\bin\Debug\maghaze shokofe.exe.config
+F:\backup\maghaze shokofe - Copy (2)\bin\Debug\maghaze shokofe.exe
+F:\backup\maghaze shokofe - Copy (2)\bin\Debug\maghaze shokofe.pdb
+F:\backup\maghaze shokofe - Copy (2)\bin\Debug\EntityFramework.dll
+F:\backup\maghaze shokofe - Copy (2)\bin\Debug\EntityFramework.SqlServer.dll
+F:\backup\maghaze shokofe - Copy (2)\bin\Debug\EntityFramework.xml
+F:\backup\maghaze shokofe - Copy (2)\bin\Debug\EntityFramework.SqlServer.xml
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze shokofe.csproj.AssemblyReference.cache
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze_shokofe.AddoneCostumer.resources
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze_shokofe.Addoneitem.resources
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze_shokofe.addordellItem.resources
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze_shokofe.Costumer.resources
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze_shokofe.EditOneItem.resources
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze_shokofe.EditorDelCustromer.resources
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze_shokofe.Form1.resources
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze_shokofe.Home.resources
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze_shokofe.Items.resources
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze_shokofe.Itemscounnt.resources
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze_shokofe.listCustomer.resources
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze_shokofe.Properties.Resources.resources
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze_shokofe.EditoneCustomer.resources
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze shokofe.csproj.GenerateResource.cache
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze shokofe.csproj.CoreCompileInputs.cache
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze shokofe.csproj.CopyComplete
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze shokofe.exe
+F:\backup\maghaze shokofe - Copy (2)\obj\Debug\maghaze shokofe.pdb

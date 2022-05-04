@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="shokofeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Buy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="BuyNumber" Type="int" Nullable="false" />
+          <Property Name="CustomerCode" Type="int" Nullable="false" />
+          <Property Name="TotalPrice" Type="int" Nullable="false" />
+          <Property Name="TotlaDiscount" Type="int" Nullable="false" />
+          <Property Name="TotalPardakht" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerCode" Type="int" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="CustomerNumber" Type="int" />
+          <Property Name="CustomerMobile" Type="int" Nullable="false" />
+          <Property Name="CustomerAddress" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'shokofe.dbo.DetailBuy' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="DetailBuy">
+          <Key>
+            <PropertyRef Name="BuyNumber" />
+            <PropertyRef Name="ItemCode" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Discount" />
+          </Key>
+          <Property Name="BuyNumber" Type="int" Nullable="false" />
+          <Property Name="ItemCode" Type="int" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="Discount" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'shokofe.dbo.DetailSale' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="DetailSale">
+          <Key>
+            <PropertyRef Name="SaleNumber" />
+            <PropertyRef Name="ItemCode" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Discount" />
+          </Key>
+          <Property Name="SaleNumber" Type="int" Nullable="false" />
+          <Property Name="ItemCode" Type="int" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="Discount" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemCode" Type="int" Nullable="false" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="Dicount" Type="int" />
+          <Property Name="Count" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sale">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="SaleNumber" Type="int" Nullable="false" />
+          <Property Name="CustomerCode" Type="int" Nullable="false" />
+          <Property Name="TotalPrice" Type="int" Nullable="false" />
+          <Property Name="TotlaDiscount" Type="int" Nullable="false" />
+          <Property Name="TotalPardakht" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="usrpssw">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'fk_Buy' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="fk_Buy" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'fk_customerBuy' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="fk_customerBuy" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'fk_customerSale' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="fk_customerSale" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'fk_ItemBuy' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="fk_ItemBuy" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'fk_ItemSale' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="fk_ItemSale" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'fk_Sale' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="fk_Sale" />-->
+        <EntityContainer Name="shokofeModelStoreContainer">
+          <EntitySet Name="Buy" EntityType="Self.Buy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sale" EntityType="Self.Sale" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usrpssw" EntityType="Self.usrpssw" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DetailBuy" EntityType="Self.DetailBuy" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [DetailBuy].[BuyNumber] AS [BuyNumber], 
+    [DetailBuy].[ItemCode] AS [ItemCode], 
+    [DetailBuy].[Price] AS [Price], 
+    [DetailBuy].[Discount] AS [Discount]
+    FROM [dbo].[DetailBuy] AS [DetailBuy]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DetailSale" EntityType="Self.DetailSale" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [DetailSale].[SaleNumber] AS [SaleNumber], 
+    [DetailSale].[ItemCode] AS [ItemCode], 
+    [DetailSale].[Price] AS [Price], 
+    [DetailSale].[Discount] AS [Discount]
+    FROM [dbo].[DetailSale] AS [DetailSale]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="shokofeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Buy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="BuyNumber" Type="Int32" Nullable="false" />
+          <Property Name="CustomerCode" Type="Int32" Nullable="false" />
+          <Property Name="TotalPrice" Type="Int32" Nullable="false" />
+          <Property Name="TotlaDiscount" Type="Int32" Nullable="false" />
+          <Property Name="TotalPardakht" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerCode" Type="Int32" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CustomerNumber" Type="Int32" />
+          <Property Name="CustomerMobile" Type="Int32" Nullable="false" />
+          <Property Name="CustomerAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemCode" Type="Int32" Nullable="false" />
+          <Property Name="ItemName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="Dicount" Type="Int32" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sale">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="SaleNumber" Type="Int32" Nullable="false" />
+          <Property Name="CustomerCode" Type="Int32" Nullable="false" />
+          <Property Name="TotalPrice" Type="Int32" Nullable="false" />
+          <Property Name="TotlaDiscount" Type="Int32" Nullable="false" />
+          <Property Name="TotalPardakht" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="usrpssw">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DetailBuy">
+          <Key>
+            <PropertyRef Name="BuyNumber" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Discount" />
+          </Key>
+          <Property Name="BuyNumber" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="Discount" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DetailSale">
+          <Key>
+            <PropertyRef Name="SaleNumber" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Discount" />
+          </Key>
+          <Property Name="SaleNumber" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="Discount" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="shokofeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Buy" EntityType="shokofeModel.Buy" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" />
+          <EntitySet Name="Item" EntityType="Self.Item" />
+          <EntitySet Name="Sale" EntityType="Self.Sale" />
+          <EntitySet Name="usrpssw" EntityType="Self.usrpssw" />
+          <EntitySet Name="DetailBuy" EntityType="Self.DetailBuy" />
+          <EntitySet Name="DetailSale" EntityType="Self.DetailSale" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="shokofeModelStoreContainer" CdmEntityContainer="shokofeEntities">
+          <EntitySetMapping Name="Buy">
+            <EntityTypeMapping TypeName="shokofeModel.Buy">
+              <MappingFragment StoreEntitySet="Buy">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="BuyNumber" ColumnName="BuyNumber" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="TotlaDiscount" ColumnName="TotlaDiscount" />
+                <ScalarProperty Name="TotalPardakht" ColumnName="TotalPardakht" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customer">
+            <EntityTypeMapping TypeName="shokofeModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
+                <ScalarProperty Name="CustomerMobile" ColumnName="CustomerMobile" />
+                <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Item">
+            <EntityTypeMapping TypeName="shokofeModel.Item">
+              <MappingFragment StoreEntitySet="Item">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Dicount" ColumnName="Dicount" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sale">
+            <EntityTypeMapping TypeName="shokofeModel.Sale">
+              <MappingFragment StoreEntitySet="Sale">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SaleNumber" ColumnName="SaleNumber" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="TotlaDiscount" ColumnName="TotlaDiscount" />
+                <ScalarProperty Name="TotalPardakht" ColumnName="TotalPardakht" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usrpssw">
+            <EntityTypeMapping TypeName="shokofeModel.usrpssw">
+              <MappingFragment StoreEntitySet="usrpssw">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetailBuy">
+            <EntityTypeMapping TypeName="shokofeModel.DetailBuy">
+              <MappingFragment StoreEntitySet="DetailBuy">
+                <ScalarProperty Name="BuyNumber" ColumnName="BuyNumber" />
+                <ScalarProperty Name="ID" ColumnName="ItemCode" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetailSale">
+            <EntityTypeMapping TypeName="shokofeModel.DetailSale">
+              <MappingFragment StoreEntitySet="DetailSale">
+                <ScalarProperty Name="SaleNumber" ColumnName="SaleNumber" />
+                <ScalarProperty Name="ID" ColumnName="ItemCode" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
